@@ -1,0 +1,1 @@
+Txt que será utilizado para anotações sobre Git e Github.
