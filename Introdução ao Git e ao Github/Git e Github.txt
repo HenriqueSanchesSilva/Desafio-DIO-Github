@@ -1,1 +1,1 @@
-Txt que será utilizado para anotações sobre Git e Github.
+Arquivo txt que será utilizado para anotações sobre Git e Github.
