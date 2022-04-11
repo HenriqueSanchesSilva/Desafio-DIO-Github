@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FlexBasis</title>
+  <style>
+    .flex-container{
+      max-width: 500px;
+      border: 1px solid black;
+      display: flex;
+    }
+
+    .item{
+      background-color: coral;
+      color: white;
+      text-align: center;
+      margin: 5px;
+    }
+
+    .bauto{
+      flex-basis: auto;
+    }
+    .bzero{
+      flex-basis: 0;
+    }
+    .bw{
+      flex-basis:100px;
+    }
+    .fg-0{
+      flex-grow: 0;
+    }
+    .fg-1{
+      flex-grow: 1;
+    }
+    .fg-2{
+      flex-grow: 2;
+    }
+    .fg-3{
+      flex-grow: 3;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="flex-container">
+    <div class="item bauto fg-1">a</div>
+    <div class="item bauto fg-3">bbb</div>
+    <div class="item bauto fg-1">c</div>
+    <div class="item bauto fg-1">c</div>
+    <div class="item bauto fg-3">def</div>
+  </div>
+  </br></br>
+  <div class="flex-container">
+    <div class="item bzero fg-1">a</div>
+    <div class="item bzero fg-1">bbb</div>
+    <div class="item bzero fg-1">c</div>
+    <div class="item bzero fg-1">c</div>
+    <div class="item bzero fg-1">def</div>
+  </div>
+  </br></br>
+  <div class="flex-container">
+    <div class="item bw ">a</div>
+    <div class="item bw ">bbb</div>
+    <div class="item bw ">c</div>
+    <div class="item bw ">c</div>
+    <div class="item bw ">def</div>
+  </div>
+</body>
+</html>

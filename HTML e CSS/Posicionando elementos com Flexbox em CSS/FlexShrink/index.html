@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FlexShrink</title>
+  <style>
+    .flex-container{
+      display:flex;
+      border: 2px solid black;
+      max-width: 350px;
+    }
+    .item{
+      margin: 5px;
+      background-color: orange;
+      font-size: 24px;
+      text-align: center;
+    }
+    .fs-0{
+      flex-shrink: mix;
+    }
+    .fs-1{
+      flex-shrink: 1;
+    }
+    .fs-2{
+      flex-shrink: 2;
+    }
+    .fs-3{
+      flex-shrink: 3;
+    }
+    .fg-1{
+      flex-grow: 1;
+    }
+    .fg-2{
+      flex-grow: 2;
+    }
+    .fb-1{
+      flex-basis: 100px;
+    }
+    .fb-2{
+      flex-basis: 2;
+    }
+  </style>
+</head>
+<body>
+  <div class="flex-container">
+    <div class="item fs-1 fg-1">A</div>
+    <div class="item fs-1 fg-1">B</div>
+    <div class="item fs-1 fg-1">C</div>
+    <div class="item fs-1 fg-1">D</div>
+    <div class="item fs-1 fg-1">E</div>
+  </div>
+  </br></br>
+  <div class="flex-container">
+    <div class="item fs-1 fg-1">A</div>
+    <div class="item fs-1 fg-1">Bcccccccccccc cccccccccc ccccccccccc ccc</div>
+    <div class="item fs-1 fg-1">C</div>
+    <div class="item fs-1 fg-1">D</div>
+    <div class="item fs-1 fg-1">E</div>
+  </div>
+  </br></br>
+  <div class="flex-container">
+    <div class="item fs-0 fb-1">A</div>
+    <div class="item fs-0 fb-1">B</div>
+    <div class="item fs-0 fb-1">C</div>
+    <div class="item fs-0 fb-1">D</div>
+    <div class="item fs-0 fb-1">E</div>
+  </div>
+</body>
+</html>
