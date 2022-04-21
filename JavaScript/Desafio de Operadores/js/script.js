@@ -12,7 +12,7 @@ function compara(num1, num2) {
   }
   else{
     return `Os números ${num1} e ${num2} não são iguais.`
-  }
+  } 
 }
 
 function maioremenor(num1, num2) {
