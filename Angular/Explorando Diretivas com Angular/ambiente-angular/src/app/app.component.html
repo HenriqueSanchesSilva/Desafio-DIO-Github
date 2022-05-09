@@ -1,0 +1,77 @@
+<h1 class="text-success text-center">Live Angular Diretivas</h1>
+
+<!-- Diretivas de Atributo -->
+
+<div [ngStyle] = "{background: count < 5 ?'red' : 'green'}"
+[ngClass] = "{custom: count >= 5}">
+  <h2 class="text-center">Contador: {{count}}</h2>
+</div>
+
+
+<!-- Diretivas Estruturais -->
+<!-- If -->
+<h2 *ngIf="count > 7; else menor" class=" text-center ">O contador passou de 7!</h2>
+
+<ng-template #menor>
+  <h2 class=" text-center ">O contador não passou de 7!</h2>
+</ng-template>
+<!-- Switch -->
+<ul [ngSwitch]="count" class="list-group mx-auto col-3">
+  <li 
+  class="list-group-item"
+  *ngSwitchCase="3"
+  >
+    É igual a 3
+  </li>
+  
+  <li 
+  class="list-group-item"
+  *ngSwitchCase="5"
+  >
+    É igual a 5
+  </li>
+
+  <li 
+  class="list-group-item"
+  *ngSwitchCase="8"
+  >
+    É igual a 8
+  </li>
+
+  <li 
+  class="list-group-item"
+  *ngSwitchCase="10"
+  >
+    É igual a 10  
+  </li>
+  <li 
+  class="list-group-item"
+  *ngSwitchDefault  
+  >
+    Default  
+  </li>
+</ul>
+<!-- For -->
+<ul class="list-group mx-auto col-3">
+  <li
+  class="list-group-item"
+    *ngFor="let i of pessoas"
+  >
+    O nome da pessoa é {{i.nome}} {{i.sobrenome}}.
+  </li>
+</ul>
+
+<div class="col-4 mx-auto my-3">
+  <h3 appMarcaTexto corDeFundo="blue" corDeTexto="pink">{{nome}}</h3>
+  <button class="btn btn-success col-4 mx-auto" (click)="clicou('Henrique')" >Clique</button>
+</div>
+
+<div class="col-4 mx-auto">
+  <input 
+  type="text" 
+  class="form-control" 
+  placeholder="Digite algo"
+  [(ngModel)]="text"
+  >
+  <h4>Saida: {{text}}</h4>
+</div>
