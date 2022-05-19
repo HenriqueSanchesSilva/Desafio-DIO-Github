@@ -80,7 +80,7 @@ export class UserFormComponent implements OnInit {
     if(this.userId !== null) {
       this.updateUser();
     }else{
-      this.createUser();
+      this.createUser();  
     }
   }
 }
